@@ -1,3 +1,5 @@
-FROM mysql:8.0
+FROM nginx:alpine
 
-COPY init-db/ /docker-entrypoint-initdb.d/
+COPY . /usr/share/nginx/html
+
+EXPOSE 80
